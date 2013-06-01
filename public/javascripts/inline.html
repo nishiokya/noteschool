@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<title>凸ポリゴン</title>
+<script src="http://js.api.olp.yahooapis.jp/OpenLocalPlatform/V1/jsapi?appid=OY1oDxsr" type="text/javascript"  charset="UTF-8" ></script>
+</head>
+<style>
+.sub-menu {
+    margin:4px;
+    padding:4px;
+    border:1px solid;
+}
+.sub-menu h3 {
+    font-size:14px;
+    margin:2px;
+    padding:2px;
+}
+</style>
+</head>
+<body>
+<div id="map" style="width:600px; height:480px;"></div>
+<div class="sub-menu">
+<h3>ポリゴン追加</h3>
+<input type="button" value="拡大" onclick="zoom(9)" />
+<input type="button" value="縮小" onclick="zoom(10)" />
+</div>
+
+
+<!-- Begin Yahoo! JAPAN Web Services Attribution Snippet -->
+<a href="http://developer.yahoo.co.jp/about">
+<img src="http://i.yimg.jp/images/yjdn/yjdn_attbtn2_105_17.gif" width="105" height="17" title="Webサービス by Yahoo! JAPAN" alt="Webサービス by Yahoo! JAPAN" border="0" style="margin:15px 15px 15px 15px"></a>
+<!-- End Yahoo! JAPAN Web Services Attribution Snippet -->
+
+
+<script>
+<!--
+var map;
+window.onload = function() {
+    map = new Y.Map("map");
+    map.addControl( new Y.SliderZoomControl() );
+    map.addControl( new Y.LayerSetControl() );
+    map.drawMap(new Y.LatLng(35.665627,139.730738), 9,"map");
+    addPolygon();
+}
+
+//ポリゴン追加処理を定義
+function addPolygon() {
+
+	var lat = 35.665627;
+	var lon = 139.730738
+	
+	var offset = 0.1;
+	
+		latlon[0] = new Y.LatLng(lat,lon);
+		latlon[1] = new Y.LatLng(lat+offset*2,lon);
+		latlon[2] = new Y.LatLng(lat+offset*2,lon+offset);
+		latlon[3] = new Y.LatLng(lat+offset,lon+offset);
+		latlon[4] = new Y.LatLng(lat+offset,lon+offset*2);
+		latlon[5] = new Y.LatLng(lat+offset*2,lon+offset*2);
+		latlon[6] = new Y.LatLng(lat+offset*2,lon+offset*3);
+		latlon[7] = new Y.LatLng(lat,lon+offset*3);
+		latlon[8] = new Y.LatLng(lat,lon);
+		//latlon[9] = new Y.LatLng(lat,lon);
+
+        var polygon = new Y.Polygon(latlon);
+        //ポリゴンを追加
+        map.addFeature(polygon,false);
+
+    map.redraw();
+}
+
+
+//-->
+</script>
+</body>
+</html>
+

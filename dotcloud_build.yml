@@ -1,0 +1,4 @@
+ramen:
+  requirements:
+    - websocket-server@1.4.01
+    - express@2.0.0beta3

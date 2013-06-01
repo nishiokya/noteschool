@@ -1,0 +1,18 @@
+body {
+  /*padding: 50px;*/
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#map{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1}
+
+
+#jquery-ui-dialog-table {
+    font-size: 13px;
+}
+#jquery-ui-dialog-table th , #jquery-ui-dialog-table td {
+    border: 1px solid gray;
+}
